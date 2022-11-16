@@ -18,9 +18,19 @@ const config = {
       directory: path.join(__dirname, "src", "db", "seeds"),
     },
   },
+
+  production: {
+    client: "postgresql",
+    connection: DATABASE_URL,
+    migrations: {
+       directory: path.join(__dirname, "src", "db", "migrations"),
+    },
+    seeds: {
+      directory: path.join(__dirname, "src", "db", "seeds"),
+    },
+  },
 };
 
 module.exports = config
 
 
-console.log(config)
